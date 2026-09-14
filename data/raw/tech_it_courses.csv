@@ -1,0 +1,5 @@
+course_id,course_code,course_name,category,duration_weeks,total_fee,description
+CRS-001,WD-101,"Full Stack Web Development","Web Development",24,350000.00,"Comprehensive MERN stack program"
+CRS-002,DS-201,"Data Science & Analytics","Data Science",20,400000.00,"Python, SQL, ML fundamentals"
+CRS-003,CS-301,"Cybersecurity Fundamentals",Cybersecurity,16,300000.00,"Network security and ethical hacking"
+CRS-004,UX-401,"UI/UX Design Professional",Design,12,250000.00,"Figma, prototyping, user research"

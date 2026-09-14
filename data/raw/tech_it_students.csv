@@ -1,0 +1,31 @@
+student_id,full_name,email,phone,dob,gender,education_level,employment_status,monthly_income_range,referral_source,registration_date
+STU-001,"Chukwuemeka Ibrahim",chukwuemeka.i@email.com,08031234567,1995-03-15,Male,BSc,"Employed Full-time",150k-250k,Referral,2026-01-10
+STU-002,"Amina Bello",amina.bello@email.com,07045678901,1998-07-22,Female,HND,Unemployed,"Below 50k","Social Media",2026-01-15
+STU-003,"Oluwaseun Adeyemi",oluwaseun.a@email.com,09087654321,1992-11-05,Male,SSCE,"Employed Part-time",50k-100k,Walk-in,2026-02-01
+STU-004,"Fatima Abdullahi",fatima.abd@email.com,08123456789,2000-01-18,Female,BSc,Student,"Below 50k",Referral,2026-02-10
+STU-005,"Emeka Obi",emeka.obi@email.com,07099887766,1990-05-30,Male,OND,"Employed Full-time",100k-150k,"Social Media",2026-02-15
+STU-006,"Chinyere Okafor",chinyere.okafor@email.com,07026542351,1990-01-29,Female,HND,"Employed Part-time",100k-150k,"Social Media",2026-06-09
+STU-007,"Ibrahim Nwachukwu",ibrahim.nwachukwu@email.com,07061849593,1989-07-23,Male,SSCE,"Employed Full-time",150k-250k,Website,2025-07-22
+STU-008,"Femi Okafor",femi.okafor@email.com,08152553419,2002-03-29,Male,OND,Unemployed,"Below 50k",Walk-in,2026-03-23
+STU-009,"Bimpe Yusuf",bimpe.yusuf@email.com,09003056413,2000-09-20,Female,BSc,"Employed Part-time",100k-150k,Walk-in,2026-01-21
+STU-010,"Zainab Okafor",zainab.okafor@email.com,08038849696,1996-02-13,Female,OND,Student,50k-100k,Walk-in,2026-01-15
+STU-011,"Ifeanyi Umeh",ifeanyi.umeh@email.com,08069166978,1993-08-21,Male,MSc,Student,"Below 50k","Social Media",2026-03-10
+STU-012,"Tobenna Okafor",tobenna.okafor@email.com,09014627048,1992-01-03,Male,HND,"Employed Full-time","Above 250k",Walk-in,2026-04-08
+STU-013,"Kayode Adeyinka",kayode.adeyinka@email.com,09028809570,1990-07-05,Male,MSc,Student,50k-100k,Walk-in,2026-03-14
+STU-014,"Bukola Suleiman",bukola.suleiman@email.com,08118227824,1999-11-01,Female,BSc,"Employed Part-time",50k-100k,Website,2026-05-20
+STU-015,"Ijeoma Okonjo",ijeoma.okonjo@email.com,09065787133,1989-06-08,Female,HND,Unemployed,"Below 50k",Walk-in,2026-01-10
+STU-016,"Chibuzor Umeh",chibuzor.umeh@email.com,07031051834,1998-11-20,Male,OND,"Employed Full-time","Above 250k","Social Media",2026-03-02
+STU-017,"Hauwa Bello",hauwa.bello@email.com,07016566701,1989-05-11,Female,HND,"Employed Part-time",50k-100k,Walk-in,2026-02-27
+STU-018,"Ifeanyi Ogundipe",ifeanyi.ogundipe@email.com,08047317810,2002-08-17,Male,MSc,Student,"Below 50k",Website,2025-08-25
+STU-019,"Uche Danjuma",uche.danjuma@email.com,08136026064,1998-03-16,Male,OND,Unemployed,"Below 50k",Referral,2026-05-05
+STU-020,"Nkechi Adeyinka",nkechi.adeyinka@email.com,08043098050,1989-02-14,Female,BSc,Unemployed,"Below 50k",Referral,2026-03-07
+STU-021,"Musa Nwosu",musa.nwosu@email.com,07091361939,2001-05-02,Male,SSCE,"Employed Full-time","Above 250k","Social Media",2026-02-03
+STU-022,"Kayode Abdullahi",kayode.abdullahi@email.com,09034624751,1988-03-17,Male,HND,Student,"Below 50k",Walk-in,2026-02-03
+STU-023,"Zainab Chukwu",zainab.chukwu@email.com,07035427849,2002-09-01,Female,HND,Unemployed,"Below 50k","Social Media",2025-07-24
+STU-024,"Ifeanyi Okafor",ifeanyi.okafor@email.com,07018244935,1992-07-25,Male,BSc,Student,50k-100k,Walk-in,2025-06-27
+STU-025,"Bukola Umeh",bukola.umeh@email.com,08140052427,2000-05-16,Female,BSc,Unemployed,"Below 50k",Walk-in,2026-05-20
+STU-026,"Ifeanyi Nwachukwu",ifeanyi.nwachukwu@email.com,07059826204,1996-03-06,Male,BSc,Unemployed,"Below 50k",Referral,2025-09-16
+STU-027,"Wale Yusuf",wale.yusuf@email.com,07058692322,1997-03-31,Male,SSCE,Unemployed,"Below 50k",Walk-in,2026-05-09
+STU-028,"Sani Yusuf",sani.yusuf@email.com,09021607337,1995-11-04,Male,HND,Unemployed,"Below 50k",Walk-in,2026-01-25
+STU-029,"Femi Muhammed",femi.muhammed@email.com,09014586850,1990-08-02,Male,BSc,"Employed Full-time","Above 250k",Website,2026-01-14
+STU-030,"Fatimah Ogundipe",fatimah.ogundipe@email.com,09056981693,1993-09-17,Female,SSCE,"Employed Part-time",50k-100k,Walk-in,2026-03-27
