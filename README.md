@@ -1,318 +1,317 @@
-# Tech/IT Training Centre Performance Analysis
+# Tech/IT Training Center Performance Analysis
 
 ## Project Overview
 
-This project analyses enrollment, financial, student outcome and demographic data from a fictional Tech/IT training centre operating across multiple locations.
+This project analyzes enrollment, student, payment, course, and training center data for a fictional multi-center technology training business.
 
-The objective is to understand enrollment performance, financial collection, student outcomes and the characteristics of the students enrolling in the training programmes.
+The goal is to understand enrollment performance, financial collection, student outcomes, and learner characteristics, then turn those findings into practical business recommendations.
 
-The analysis was completed using My SQL for extracting the datas, Python, Excel and Power BI, with the final Power BI dashboard providing an interactive view of the centre's performance.
+The project follows a complete analytics workflow:
+
+**SQL → Python → Excel → Power BI → Business Recommendations**
+
+---
 
 ## Business Questions
 
-The analysis focuses on four main areas:
+The analysis focuses on questions such as:
 
-1. **Enrollment:** How are enrollments distributed across courses, centres and referral sources?
-2. **Financial Performance:** How much is owed, how much has been collected and what remains outstanding?
-3. **Student Outcomes:** What proportion of decided enrollments are completed versus dropped out?
-4. **Student Profile:** What are the demographic and socioeconomic characteristics of enrolled students?
+1. How are enrollments distributed across centers and courses?
+2. Which courses and centers attract the most students?
+3. How much revenue is due, collected, and outstanding?
+4. What proportion of decided enrollments are completed or dropped out?
+5. How do student outcomes differ across centers and courses?
+6. Which payment plans are most commonly used?
+7. What are the main demographic and employment characteristics of students?
+8. What areas should management investigate to improve enrollment, retention, and financial performance?
+
+---
 
 ## Tools Used
 
-* Python — data cleaning, transformation and analysis
-* Pandas — data manipulation
-* Matplotlib — exploratory visualisation
-* Excel — reporting and dashboard development
-* Power BI — interactive dashboard and business reporting
-* MySQL — data preparation and analysis
+* **MySQL** — data exploration, joins, aggregation, and business analysis
+* **Python / Pandas** — data cleaning, validation, transformation, and analysis
+* **Matplotlib** — exploratory visualizations
+* **Excel** — management report and KPI analysis
+* **Power BI** — interactive business dashboard
+* **Git / GitHub** — version control and portfolio presentation
+
+---
 
 ## Executive Summary
 
-The analysis of 35 enrollments provides an overview of enrollment performance, financial collection, student outcomes and student characteristics across the training centre's courses and locations.
+The dataset contains **35 enrollments** across three training centers and four technology courses.
 
-Enrollment is concentrated in Full Stack Web Development and TechHub Ikeja, while Walk-in is the largest referral source. Financially, the centre has collected 81.37% of the ₦12.3 million in fees due, leaving ₦2.29 million outstanding. Among the 18 enrollments that have reached a final outcome, 9 completed and 9 dropped out, resulting in a 50% completion rate and 50% dropout rate. Completion performance also varies across centres and courses, although the relatively small number of decided enrollments means these differences should be investigated further before making major decisions.
+### Key KPIs
 
-The findings suggest that management should focus on understanding what drives strong enrollment performance, strengthening payment monitoring and collection, investigating the factors associated with student dropout, and comparing performance across centres, referral sources and payment plans. Rather than relying on overall rankings or headline percentages, decisions should be based on deeper investigation of the factors behind the results and adapted to the circumstances of individual centres and student groups.
+| KPI                |         Result |
+| ------------------ | -------------: |
+| Total Enrollments  |             35 |
+| Unique Students    |             22 |
+| Active Enrollments |             16 |
+| Completed          |              9 |
+| Dropped Out        |              9 |
+| Decided Outcomes   |             18 |
+| Still In Progress  |             17 |
+| Completion Rate    |            50% |
+| Dropout Rate       |            50% |
+| Total Fees Due     |    ₦12,300,000 |
+| Total Amount Paid  | ₦10,008,802.28 |
+| Outstanding Amount |  ₦2,291,197.72 |
+| Collection Rate    |         81.37% |
 
+The results show strong enrollment activity and an overall collection rate of 81.37%, but there is also a significant outstanding balance and an equal number of completed and dropped-out students among decided outcomes.
 
+Because 17 of the 35 enrollments are still in progress, outcome rates should be interpreted using the **18 decided enrollments** rather than the entire enrollment population.
+
+---
+
+## Dashboard Preview
+
+### Overview
+
+![Overview Dashboard](images/overview.png)
+
+### Financial Performance
+
+![Financial Dashboard](images/financials.png)
+
+### Student Outcomes
+
+![Outcomes Dashboard](images/outcomes.png)
+
+### Student Profile
+
+![Student Profile Dashboard](images/student_profile.png)
+
+---
 
 ## Business Insights
 
-## 1. Enrollment Concentration
+### 1. Enrollment is concentrated in a small number of courses and centers
 
-### Finding
+Full Stack Web Development accounts for **18 of the 35 enrollments**, while TechHub Ikeja has **16 of the 35 enrollments**.
 
-Enrollment is concentrated in Full Stack Web Development and at TechHub Ikeja.
+This concentration may create dependency on particular courses or locations. Management should understand what is driving this demand and determine whether successful practices can be replicated across other centers and courses.
 
-### Evidence
+### 2. Financial collection is relatively strong, but a significant balance remains outstanding
 
-Full Stack Web Development recorded 18 of the 35 enrollments, making it the largest course by enrollment volume. TechHub Ikeja recorded 16 of the 35 enrollments, making it the highest-volume centre.
+The business has **₦12.3 million in total fees due** and has collected **₦10,008,802.28**, giving an overall collection rate of **81.37%**.
 
-### Business Meaning
+However, **₦2,291,197.72 remains outstanding**. Payment monitoring and follow-up therefore remain important areas for management attention.
 
-The business currently relies heavily on a small number of courses and locations for enrollment volume. Strong demand in these areas is positive, but the concentration also creates potential dependency risk if demand or operational capacity changes.
+### 3. Completion and dropout are evenly split among decided outcomes
 
-### Recommendation
+Among the **18 decided enrollments**, there are:
 
-Management should investigate the factors driving strong performance in Full Stack Web Development and TechHub Ikeja and determine whether successful practices can be replicated across other courses and centres. At the same time, performance in lower-volume courses should be monitored to identify opportunities for growth.
+* 9 completed
+* 9 dropped out
 
-## 2. Strong Collection Rate with Outstanding Fees
+This produces a **50% completion rate and 50% dropout rate** among decided outcomes.
 
-### Finding
+However, 17 enrollments are still active or suspended, meaning the current outcome picture is not yet final for the entire enrollment population.
 
-The training centre has collected 81.37% of total fees due, while ₦2,291,197.72 remains outstanding.
+### 4. Completion rates vary across training centers
 
-### Evidence
+Among decided outcomes:
 
-Total fees due are ₦12,300,000, of which ₦10,008,802.28 has been collected. This leaves an outstanding balance of ₦2,291,197.72.
+| Center         | Completion Rate |
+| -------------- | --------------: |
+| CodeBase Abuja |             75% |
+| DevCenter PH   |             50% |
+| TechHub Ikeja  |             40% |
 
-### Business Meaning
+These differences should not automatically be interpreted as evidence that one center performs better than another.
 
-The collection rate indicates that most fees due have been collected, which is positive for the centre's cash collection performance. However, the outstanding balance represents a significant amount of fees that remain uncollected and may affect cash flow if collection is delayed.
+The decided groups are relatively small, so management should investigate factors such as course mix, student characteristics, payment behavior, learner support, and operational differences.
 
-### Recommendation
+### 5. Walk-in and social media referrals generate the largest enrollment volumes
 
-Management should monitor outstanding balances closely and strengthen follow-up on unpaid or overdue installments. Payment-plan monitoring can also help identify students who may require earlier intervention before balances become significantly overdue.
+Enrollment sources are:
 
-## 3. Equal Completion and Dropout Among Decided Outcomes
+| Referral Source | Enrollments |
+| --------------- | ----------: |
+| Walk-in         |          15 |
+| Social Media    |          10 |
+| Website         |           6 |
+| Referral        |           4 |
 
-### Finding
+Enrollment volume alone does not establish which channel is most valuable.
 
-Among enrollments that have reached a final outcome, completion and dropout are evenly split at 50% each.
+Management should compare referral sources using additional measures such as completion, dropout, payment performance, and acquisition cost.
 
-### Evidence
+### 6. Two-installment and three-installment plans are the most common
 
-There are 18 decided enrollments: 9 completed and 9 dropped out. A further 17 enrollments are still active or suspended and therefore have not yet reached a final outcome.
+Payment plan adoption is:
 
-### Business Meaning
+| Payment Plan   | Enrollments |
+| -------------- | ----------: |
+| 2 Installments |          15 |
+| 3 Installments |          12 |
+| Monthly        |           6 |
+| Full Payment   |           2 |
 
-The 50% completion rate indicates that half of the enrollments that have reached a final outcome successfully completed their programmes, while the other half dropped out. Although the current completion performance provides a useful baseline, the dropout level indicates an opportunity to improve student retention and programme completion.
+The popularity of a payment plan does not necessarily mean it is the most effective option for the business or students.
 
-The 17 enrollments still in progress should be monitored separately because their eventual outcomes are not yet known.
+Payment performance should be compared across plans to identify whether certain structures are associated with stronger or weaker collection behavior.
 
-### Recommendation
+### 7. Course completion results require further investigation
 
-Management should investigate the reasons behind student dropout, particularly whether financial difficulties, payment issues, programme-related factors or student characteristics are associated with withdrawal. Early intervention and closer monitoring of students showing signs of disengagement could help improve future completion rates.
+Among decided outcomes:
 
-## 4. Completion Performance Varies by Centre
+| Course                     | Completion Rate |
+| -------------------------- | --------------: |
+| Full Stack Web Development |             64% |
+| Cybersecurity Fundamentals |             50% |
+| Data Science & Analytics   |              0% |
+| UI/UX Design Professional  |              0% |
 
-### Finding
+The results for Data Science and UI/UX should be interpreted cautiously because their decided populations are much smaller.
 
-Completion rates differ substantially across the three training centres, with CodeBase Abuja recording the highest completion rate at 75%, compared with 50% at DevCenter PH and 40% at TechHub Ikeja.
+Rather than immediately concluding that these courses perform poorly, management should investigate enrollment volume, student characteristics, course difficulty, learner support, attendance, and other possible factors.
 
-### Evidence
+---
 
-Among decided enrollments, CodeBase Abuja recorded a 75% completion rate, DevCenter PH recorded 50%, and TechHub Ikeja recorded 40%.
+## Business Recommendations
 
-### Business Meaning
+### 1. Reduce concentration risk
 
-The difference suggests that student outcomes may vary by centre. The stronger performance at CodeBase Abuja provides an opportunity to investigate which operational or student-support practices may be contributing to its higher completion rate.
+Review why Full Stack Web Development and TechHub Ikeja attract a large proportion of enrollments.
 
-However, centre-level completion rates should be interpreted alongside the number of decided enrollments because the groups are relatively small.
+Identify successful practices that could potentially be applied to other courses and centers.
 
-### Recommendation
+### 2. Strengthen payment monitoring
 
-Management should investigate the practices, student support processes, payment patterns and programme mix associated with higher completion at CodeBase Abuja. Successful practices should then be assessed for possible adaptation at centres with lower completion rates rather than assuming that identical measures will produce the same results.
+Implement regular tracking of outstanding balances, overdue payments, and upcoming installments.
 
-## 5. Enrollment Sources Show Different Acquisition Channels
+Prioritize follow-up for students with overdue balances while maintaining appropriate communication with active students.
 
-### Finding
+### 3. Investigate dropout drivers
 
-Students enroll through multiple referral channels, with Walk-in generating the highest number of enrollments.
+Because completed and dropped-out enrollments are currently equal among decided outcomes, management should investigate why students leave.
 
-### Evidence
+Useful additional information would include attendance, academic performance, satisfaction, payment difficulties, and recorded dropout reasons.
 
-Walk-in recorded 15 enrollments, followed by Social Media with 10, Website with 6 and Referral with 4.
+### 4. Investigate center-level differences
 
-### Business Meaning
+Compare centers using a broader set of indicators rather than completion rate alone.
 
-The distribution of enrollments across referral sources shows that the training centre attracts students through different acquisition channels. Walk-in currently contributes the largest volume of enrollments, but volume alone does not determine the value of a referral source.
+This could include:
 
-The business should also consider factors such as completion rates, payment behaviour, student retention and acquisition costs when evaluating the effectiveness of each channel.
+* Enrollment volume
+* Dropout rate
+* Payment collection
+* Course mix
+* Student characteristics
+* Learner support
+* Staff performance
 
-### Recommendation
+### 5. Evaluate referral channels by quality, not only volume
 
-Management should investigate the quality and performance of students from each referral source, including financial outcomes and completion rates. Marketing investment decisions should be based on both enrollment volume and student outcomes rather than volume alone.
+Track the full journey from acquisition to completion and payment.
 
-## 6. Payment Plan Adoption Varies
+A lower-volume channel could potentially be more valuable if it produces students with stronger completion and payment outcomes.
 
-### Finding
+### 6. Review payment-plan performance
 
-Most enrollments use installment-based payment plans, with the two-installment plan being the most common.
+Compare payment plans based on collection rate, overdue payments, and outstanding balances.
 
-### Evidence
+This can help determine whether payment structures should be adjusted for particular student groups or centers.
 
-The two-installment plan accounts for 15 enrollments, followed by the three-installment plan with 12. Monthly payment is used by 6 enrollments, while only 2 enrollments use full payment.
+### 7. Collect more operational data
 
-### Business Meaning
+Future analysis would benefit from variables such as attendance, satisfaction, academic performance, marketing spend, acquisition cost, and dropout reasons.
 
-The distribution indicates that students generally prefer spreading their payments rather than paying their full fees upfront. However, adoption alone does not establish which payment plan is most beneficial to the business.
+These variables would provide stronger evidence for explaining student outcomes.
 
-Payment-plan performance should also be evaluated against collection rates, overdue payments, outstanding balances and student outcomes. Adoption may also differ between centres, so an overall payment-plan view may not represent the behaviour of every location.
-
-### Recommendation
-
-Management should compare payment performance and student outcomes across payment plans and centres before deciding whether to promote a particular plan more heavily. The objective should be to balance affordability for students with predictable cash collection for the business.
-
-## 7. Course Completion Rates Require Context
-
-### Finding
-
-Completion rates vary across courses, with Full Stack Web Development recording the highest completion rate among the courses analysed.
-
-### Evidence
-
-Full Stack Web Development recorded a 64% completion rate, Cybersecurity Fundamentals recorded 50%, while Data Science & Analytics and UI/UX Design Professional recorded 0% among their decided enrollments.
-
-### Business Meaning
-
-The differences in completion rates provide a useful basis for comparing student outcomes across programmes. However, the rates should not be interpreted in isolation because courses have different numbers of decided enrollments. Smaller groups can produce large percentage differences from relatively few students.
-
-Other factors may also contribute to differences in completion, including student characteristics, payment behaviour, programme structure and support provided during training.
-
-### Recommendation
-
-Management should monitor course-level completion alongside the number of decided enrollments and investigate the factors associated with stronger or weaker outcomes. Courses with lower completion rates should be examined further before making decisions about programme performance or changes.
-
-## Recommendation 1: Investigate and Leverage High-Demand Areas
-
-Management should investigate the factors driving the strong enrollment performance of Full Stack Web Development and TechHub Ikeja before increasing investment in either area.
-
-The investigation should consider pricing and payment plans, course availability, advertising and outreach, course duration, and whether the programme is delivered online or physically at the centre.
-
-If the analysis confirms that these factors are contributing to stronger demand, management can consider increasing promotion for Full Stack at TechHub Ikeja. The business should also identify which successful practices can be adapted to lower-volume courses and other centres rather than assuming that the same approach will work everywhere.
-
-## Recommendation 2: Strengthen Payment Monitoring and Collection
-
-Management should establish a structured follow-up process for students with outstanding or overdue balances. This could include payment reminders, regular monitoring of unpaid installments and an escalation process for prolonged non-payment.
-
-To reduce future outstanding balances, management should also investigate payment-plan performance and identify which plans, centres or student groups are associated with higher levels of overdue or unpaid amounts.
-
-The objective should be to improve cash collection while identifying payment arrangements that remain manageable for students and sustainable for the business.
-
-## Recommendation 3: Investigate and Address Student Dropout
-
-Management should investigate the reasons behind student dropout and compare the characteristics and experiences of dropped-out students with those who completed their programmes.
-
-The analysis should look for recurring patterns across factors such as payment behaviour, payment plans, course, centre, referral source and student characteristics. Identifying factors associated with dropout can help management determine where earlier intervention may be needed.
-
-The findings should then be used to strengthen retention strategies for future students and to identify students currently in progress who may benefit from additional support or monitoring.
-
-## Recommendation 4: Identify and Adapt High-Performing Centre Practices
-
-Management should conduct a deeper comparison of the three centres to understand the factors associated with differences in completion performance.
-
-The investigation should consider operational management, advertising and outreach, employee performance, enrollment patterns, payment plans and pricing, centre characteristics and location, as well as student demographics.
-
-CodeBase Abuja's stronger completion performance provides a useful starting point for this investigation. Where the analysis identifies practices that may contribute to better outcomes, management should assess whether those practices can be adapted at lower-performing centres rather than assuming that the same approach will work everywhere.
-
-Because the number of decided enrollments at each centre is relatively small, these findings should be treated as an area for further investigation rather than definitive evidence of centre performance.
-
-## Recommendation 5: Evaluate Referral Sources by Centre and Student Outcomes
-
-Management should evaluate referral sources at the centre level rather than relying on the overall enrollment volume of each channel.
-
-Although Walk-in currently generates the highest number of enrollments, this does not necessarily mean it should be prioritised across every centre. Management should compare referral channels by enrollment volume, student outcomes and payment behaviour, while also considering acquisition costs where that information is available.
-
-This analysis can identify which channels are most effective for each centre and help management allocate marketing resources based on the quality and performance of enrollments rather than volume alone.
-
-## Recommendation 6: Evaluate Payment Plans by Centre
-
-Management should evaluate payment-plan performance separately for each centre rather than assuming that the most widely adopted plan is the most suitable.
-
-The analysis should compare payment-plan adoption, collection performance, outstanding balances, overdue payments and student outcomes across centres. This would help identify whether certain payment plans are better suited to particular locations or student groups.
-
-Based on these findings, management can determine which payment arrangements to prioritise at each centre while maintaining a balance between student affordability and reliable fee collection.
-
-## Recommendation 7: Investigate Course-Level Outcome Differences
-
-Management should avoid making major decisions about course investment based on completion rates alone. The courses have different numbers of decided enrollments, and the overall dataset is relatively small, making large percentage differences sensitive to the number of students involved.
-
-Before reducing investment in courses with lower completion rates, management should investigate factors such as student characteristics, payment behaviour, course structure, centre, and the level of student support provided.
-
-Course completion should therefore be monitored alongside enrollment volume and other relevant business factors before decisions are made about programme investment or changes.
+---
 
 ## Project Limitations
 
-Several limitations should be considered when interpreting the findings from this analysis.
+This analysis has several limitations:
 
-### 1. Small Dataset
+* The dataset contains only **35 enrollments**, so results should not be generalized without additional data.
+* **17 enrollments are still active or suspended**, meaning their final outcomes are not yet known.
+* The dataset covers approximately one year of enrollment activity.
+* Important explanatory variables such as attendance, satisfaction, academic performance, marketing spend, and dropout reasons are not available.
+* The analysis identifies patterns and relationships but does not establish causation.
+* Payment data operates at a different grain from enrollment data and therefore requires separate aggregation before being combined with enrollment-level analysis.
+* Larger and more historical datasets would provide a stronger basis for trend analysis and business decisions.
 
-The analysis is based on 35 enrollments. This relatively small population means that percentage differences, particularly at the course and centre level, can be strongly influenced by a small number of students. The findings should therefore be treated as indicators for further investigation rather than definitive evidence of performance.
-
-### 2. Many Enrollments Are Still in Progress
-
-Of the 35 enrollments, 17 are still active or suspended and have not reached a final outcome. Completion and dropout rates were therefore calculated using only the 18 decided enrollments. The eventual outcomes of the students still in progress may change the overall outcome picture.
-
-### 3. Limited Historical Period
-
-The enrollment data covers approximately one year, from July 2025 to June 2026. This limits the ability to identify long-term trends, seasonal patterns or changes in performance over several years.
-
-### 4. Limited Explanatory Variables
-
-The available data describes enrollment, payments, outcomes and student characteristics, but does not include some factors that could help explain the observed patterns. Examples include advertising expenditure, detailed employee performance, student satisfaction, attendance, academic performance and reasons for dropout.
-
-### 5. Findings Do Not Establish Causation
-
-The analysis identifies patterns and relationships in the available data but does not establish that one factor caused another. For example, differences in completion rates between centres or courses should not automatically be attributed to the centre, course or any individual characteristic without further investigation.
-
-### 6. Payment Data Requires Careful Interpretation
-
-Financial analysis uses the enrollment-level `Data` table and the installment-level `Payments` table separately because they have different grains. Combining these tables without accounting for the one-to-many relationship could duplicate enrollment-level values and produce misleading financial results.
-
-### Overall Limitation
-
-The analysis provides a useful baseline for understanding the training centre's current performance, but additional data and a larger historical population would allow management to investigate the identified patterns with greater confidence.
-
+---
 
 ## Project Workflow
 
-The project followed a structured data analysis workflow from raw data preparation through business reporting.
-
 ### 1. Data Preparation
 
-The source CSV files were inspected and cleaned using Python and Pandas. Data types, missing values, duplicates and key fields were reviewed before analysis.
+Raw CSV files were inspected for:
 
-### 2. Data Transformation and Analysis
+* Missing values
+* Duplicate records
+* Data types
+* Key relationships
+* Table grain
+* Data consistency
 
-The datasets were joined at the appropriate level of detail to create an enrollment-level analytical dataset. Business metrics were calculated using the correct grain for each analysis.
+### 2. SQL Analysis
 
-Payment data was kept at installment level where appropriate to avoid duplicating enrollment-level financial values.
+MySQL was used to:
 
-### 3. Exploratory Analysis
+* Join related tables
+* Aggregate enrollment and payment information
+* Analyze course and center performance
+* Examine student outcomes
+* Calculate financial metrics
+* Answer business questions
 
-The analysis examined enrollment trends, course and centre performance, referral sources, financial collection, payment behaviour, student outcomes and demographic characteristics.
+SQL analysis is available in:
 
-### 4. Business Analysis
+`sql/training_center_analysis.sql`
 
-The results were interpreted from a management perspective, focusing on areas such as enrollment concentration, outstanding fees, student dropout, centre performance, referral channels and payment plans.
+### 3. Python Analysis
 
-### 5. Excel Reporting
+Python and Pandas were used for:
 
-An Excel report was created to provide a structured business reporting view of the analysis, including KPIs, tables, charts and interactive filtering.
+* Data cleaning
+* Data validation
+* Data transformation
+* Dataset integration
+* Exploratory analysis
+* Analytical feature creation
 
-### 6. Power BI Dashboard
+The main notebook is:
 
-The final interactive dashboard was developed in Power BI across four pages:
+`notebook/training_center_analysis.ipynb`
 
-* Overview
-* Financial Performance
-* Student Outcomes
-* Student Profile
+### 4. Excel Reporting
 
-The dashboard includes interactive filters for centre, course, status and enrollment date.
+An Excel report was created to provide a structured management view of the business performance.
 
-### 7. Documentation
+File:
 
-The findings, recommendations, limitations and analytical decisions were documented in this README to make the project reproducible and understandable to both technical and non-technical users.
+`excel/training_center_dashboard_final.xlsx`
+
+### 5. Power BI Dashboard
+
+The Power BI report provides interactive views of:
+
+* Overall performance
+* Financial performance
+* Student outcomes
+* Student profile
+
+File:
+
+`powerbi/Tech_IT_Training_Center_Performance_Dashboard.pbix`
 
 ---
 
 ## Repository Structure
 
 ```text
-Tech-IT-Training-Centre-Performance-Analysis/
+Tech-IT-Training-Center-Performance-Analysis/
 │
+├── .gitignore
 ├── README.md
 │
 ├── data/
@@ -326,17 +325,17 @@ Tech-IT-Training-Centre-Performance-Analysis/
 │   └── processed/
 │       └── enrollment_analysis.csv
 │
-├── python/
-│   └── training_centre_analysis.ipynb
+├── notebook/
+│   └── training_center_analysis.ipynb
 │
 ├── sql/
 │   └── training_center_analysis.sql
 │
 ├── excel/
-│   └── training_centre_dashboard.xlsx
+│   └── training_center_dashboard_final.xlsx
 │
 ├── powerbi/
-│   └── Tech_IT_Training_Centre_Performance_Dashboard.pbix
+│   └── Tech_IT_Training_Center_Performance_Dashboard.pbix
 │
 └── images/
     ├── overview.png
@@ -349,83 +348,86 @@ Tech-IT-Training-Centre-Performance-Analysis/
 
 ## How to Reproduce
 
-### Requirements
+### 1. Clone the repository
 
-The Python analysis requires:
-
-* Python 3.x
-* Pandas
-* Matplotlib
-* Jupyter Notebook
-
-The SQL analysis requires a MySQL-compatible database environment.
-
-Excel and Power BI are required to open and interact with the corresponding report files.
-
-### Python Analysis
-
-1. Clone or download the repository.
-2. Open the project in VS Code or another Python development environment.
-3. Open:
-
-```text
-python/training_centre_analysis.ipynb
+```bash
+git clone https://github.com/Richie-O/Tech-IT-Training-Center-Performance-Analysis.git
 ```
 
-4. Ensure the raw datasets are available in:
+### 2. Open the project
+
+Open the project folder in VS Code or another development environment.
+
+### 3. Run the Python notebook
+
+Open:
 
 ```text
-data/raw/
+notebook/training_center_analysis.ipynb
 ```
 
-5. Run the notebook from beginning to end.
+Run the notebook from the beginning to reproduce the Python analysis.
 
-The processed enrollment-level dataset will be generated in:
+### 4. Review the SQL analysis
 
-```text
-data/processed/enrollment_analysis.csv
-```
-
-### SQL Analysis
-
-The SQL analysis is available in:
+Open:
 
 ```text
 sql/training_center_analysis.sql
 ```
 
-The script contains the SQL analysis used to investigate the training centre data and answer business questions.
+The queries can be executed in MySQL against the project database.
 
-### Excel Report
+### 5. Open the Excel report
 
-The completed Excel report is available at:
-
-```text
-excel/training_centre_dashboard.xlsx
-```
-
-The workbook contains the dashboard, supporting analysis sheets and source data used for reporting.
-
-### Power BI Dashboard
-
-The completed Power BI report is available at:
+Open:
 
 ```text
-powerbi/Tech_IT_Training_Centre_Performance_Dashboard.pbix
+excel/training_center_dashboard_final.xlsx
 ```
 
-Open the `.pbix` file using Power BI Desktop to explore the interactive dashboard.
+### 6. Open the Power BI report
+
+Open:
+
+```text
+powerbi/Tech_IT_Training_Center_Performance_Dashboard.pbix
+```
 
 ---
 
 ## Key Analytical Considerations
 
-A major focus of this project was ensuring that calculations were performed at the appropriate level of detail.
+### Enrollment Grain
 
-The main analytical dataset has a grain of **one row per enrollment**, while the payment dataset has a grain of **one row per payment installment**.
+The main enrollment dataset has a grain of **one row per enrollment**.
 
-These different grains were deliberately maintained to prevent one-to-many joins from duplicating enrollment-level financial values.
+This grain is used for enrollment-level KPIs and outcome analysis.
 
-Outcome rates were also calculated using an appropriate denominator. Completion and dropout rates use only enrollments with a decided outcome: completed or dropped out. Active and suspended enrollments remain in progress and are therefore excluded from the decided-outcome denominator.
+### Payment Grain
 
-This approach helps ensure that the reported metrics reflect the underlying business process rather than simply counting rows.
+The payment dataset has a grain of **one row per payment/installment**.
+
+Payment-level data should therefore be aggregated to the enrollment level before being combined with enrollment-level metrics.
+
+### Outcome Denominator
+
+Completion and dropout rates are calculated using only decided outcomes:
+
+**Completed + Dropped Out = 18 enrollments**
+
+Active and suspended enrollments are excluded because their final outcomes have not yet been determined.
+
+### Interpretation
+
+The analysis is intended to support business investigation and decision-making rather than claim causality.
+
+Where the dataset is small or outcomes are still incomplete, findings are presented as areas for investigation rather than definitive explanations.
+
+---
+
+## Conclusion
+
+This project demonstrates an end-to-end business analytics workflow, from raw operational data through SQL analysis, Python data preparation, Excel reporting, Power BI visualization, and business recommendations.
+
+The main objective is not simply to produce dashboards, but to demonstrate how an analyst can move from **business questions → data → analysis → insights → recommendations**.
